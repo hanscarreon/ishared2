@@ -1,0 +1,40 @@
+<?php 
+
+                    if(!isset($_GET['error'])){
+                      exit();
+
+                    }else{
+                      $checkerror = $_GET['error'];
+                      if($checkerror == 'emptyfield'){
+                        echo '
+                              <div class="card-body" style="color:red">
+                                Empty Fields!!
+                              </div>';
+                              exit();
+                      }elseif($checkerror == 'wrongpass'){
+
+                         echo '
+                              <div class="card-body" style="color:red">
+                                Wrong Password!!
+                              </div>';
+                              exit();
+                      }
+                      elseif($checkerror == 'nouser'){
+
+                         echo '
+                              <div class="card-body" style="color:red">
+                                User Not Register!!
+                              </div>';
+                              exit();
+                      }
+                      elseif($checkerror == 'sqlerror'){
+
+                         echo '
+                              <div class="card-body" style="color:red">
+                                System Error!!
+                              </div>';
+                              exit();
+                      }
+                    }
+
+                  ?>
